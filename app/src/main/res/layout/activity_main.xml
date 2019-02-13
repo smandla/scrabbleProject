@@ -21,14 +21,20 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <LinearLayout
+            <RelativeLayout
+
                 android:id="@+id/menuDropDown"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                tools:context=".MainActivity">>
 
-            </LinearLayout>
+                <Spinner
+                    android:id="@+id/menuSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dialog" />
+            </RelativeLayout>
 
             <LinearLayout
                 android:id="@+id/dictionaryButton"
@@ -40,20 +46,19 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"></LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/dictionary"
+                    <ImageButton
+                        android:id="@+id/imageButton10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:background="@color/colorAccent"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/dictionary" />
                 </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -63,14 +68,20 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/swapTileImageButton"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/colorAccent"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/coin_bag" />
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorAccent"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/bag" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -120,7 +131,7 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="4"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -140,6 +151,13 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/scrabble_board" />
             </LinearLayout>
         </LinearLayout>
 
@@ -158,12 +176,13 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@color/colorAccent"
                     android:scaleType="fitCenter"
-                    tools:srcCompat="@tools:sample/avatars[6]" />
+                    app:srcCompat="@drawable/minion_jerry" />
             </LinearLayout>
 
             <LinearLayout
@@ -174,11 +193,13 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars[9]" />
+                    android:background="@color/colorAccent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/minion_bob" />
             </LinearLayout>
 
             <LinearLayout
@@ -188,6 +209,14 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/tilesRemainingText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Tiles Remaining: 36"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                    android:textSize="25sp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -195,13 +224,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1.5"
+        android:layout_weight="2.5"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             android:orientation="vertical">
 
         </LinearLayout>
@@ -210,16 +239,134 @@
             android:id="@+id/playersTiles"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
+            <LinearLayout
+                android:id="@+id/tileOne"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/tile_o" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tileTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/tile_a" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tileThree"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/tile_j" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tileFour"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/tile_c" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tileFive"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/tile_b" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tileSix"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/tile_e" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tileSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/tile_t" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/points"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             android:orientation="vertical">
 
         </LinearLayout>
