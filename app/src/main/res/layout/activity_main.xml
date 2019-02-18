@@ -158,7 +158,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/scrabble_board" />
+                    app:srcCompat="@drawable/board_in_play" />
             </LinearLayout>
         </LinearLayout>
 
@@ -169,21 +169,46 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/myProfileImage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                app:srcCompat="@drawable/scrabprof" />
+
             <LinearLayout
                 android:id="@+id/yourProfile"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/imageView"
+                <TextView
+                    android:id="@+id/playerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="30dp"
+                    android:text="My Score:" />
+
+                <TextView
+                    android:id="@+id/playerScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@color/colorAccent"
-                    app:srcCompat="@drawable/scrabprof" />
+                    android:paddingLeft="5dp"
+                    android:text="16" />
             </LinearLayout>
+
+            <ImageView
+                android:id="@+id/opponentProfileImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/scrabprof4" />
 
             <LinearLayout
                 android:id="@+id/opponentProfile"
@@ -192,14 +217,19 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/opponentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@color/colorAccent"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/scrabprof4" />
+                    android:text="Opponent Score:" />
+
+                <TextView
+                    android:id="@+id/opponentScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="21" />
             </LinearLayout>
 
             <LinearLayout
@@ -216,7 +246,7 @@
                     android:gravity="center"
                     android:text="Tiles Remaining: 36"
                     android:textAppearance="@style/TextAppearance.AppCompat.Button"
-                    android:textSize="25sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
