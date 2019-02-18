@@ -37,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
         String[] plants = new String[]{
                 "Menu",
                 "Instructions",
-                "Sound On/Off"
+                "Sound On/Off",
+                "Quit Game"
 
         };
 

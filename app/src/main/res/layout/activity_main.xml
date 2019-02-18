@@ -56,7 +56,7 @@
                         android:layout_weight="1"
                         android:background="@color/colorAccent"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/dictionary" />
+                        app:srcCompat="@drawable/scrabdiction" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -80,7 +80,7 @@
                         android:layout_weight="1"
                         android:background="@color/colorAccent"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/bag" />
+                        app:srcCompat="@drawable/scrabswap" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -99,7 +99,7 @@
                     android:cropToPadding="false"
                     android:scaleType="fitCenter"
                     android:visibility="visible"
-                    app:srcCompat="@drawable/cartoon_random_play_289620" />
+                    app:srcCompat="@drawable/scrabshuff" />
             </LinearLayout>
 
             <LinearLayout
@@ -112,11 +112,12 @@
                 <ImageButton
                     android:id="@+id/passImageButton"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@color/colorAccent"
+                    android:cropToPadding="false"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/skip" />
+                    app:srcCompat="@drawable/skipbutton" />
             </LinearLayout>
         </LinearLayout>
 
@@ -176,13 +177,12 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@color/colorAccent"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/minion_jerry" />
+                    app:srcCompat="@drawable/scrabprof" />
             </LinearLayout>
 
             <LinearLayout
@@ -199,7 +199,7 @@
                     android:layout_weight="1"
                     android:background="@color/colorAccent"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/minion_bob" />
+                    app:srcCompat="@drawable/scrabprof4" />
             </LinearLayout>
 
             <LinearLayout
@@ -369,6 +369,13 @@
             android:layout_weight="1.5"
             android:orientation="vertical">
 
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/playbutton" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
